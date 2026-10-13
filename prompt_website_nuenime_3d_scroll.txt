@@ -1,0 +1,341 @@
+PROMPT PEMBUATAN WEBSITE NUENIME — 3D SCROLL EXPERIENCE
+PHP • Secure by Design • Black & Silver • Bottom Navigation
+
+Buat sebuah website promosi resmi untuk Nuenime, aplikasi streaming anime yang memungkinkan pengguna menonton anime secara gratis tanpa iklan sama sekali. Website harus memiliki pengalaman visual 3D scroll yang imersif dan premium, terinspirasi dari pendekatan interaktif pada igloo.inc: ketika pengguna menggulir halaman, elemen-elemen website tidak sekadar bergerak ke atas atau bawah, tetapi juga berubah bentuk, skala, kedalaman, rotasi, posisi, perspektif, dan susunan secara terarah. Jadikan hasilnya sebagai karya desain web yang matang, responsif, cepat, dan benar-benar dapat digunakan—bukan sekadar mockup atau kumpulan animasi acak.
+
+PENTING: Jadikan igloo.inc sebagai referensi inspirasi interaksi dan kualitas pengalaman saja. Jangan menyalin identitas, layout, aset, teks, atau kode situs tersebut secara persis. Buat identitas visual Nuenime yang orisinal.
+
+==================================================
+1. IDENTITAS DAN TUJUAN WEBSITE
+==================================================
+
+Nama produk: Nuenime
+Jenis produk: Aplikasi streaming anime
+Pesan utama: Streaming anime gratis tanpa iklan sama sekali.
+Informasi peluncuran: Direncanakan rilis pada Oktober 2026.
+Pengembang: Nueva Labs Development
+
+Gunakan bahasa Indonesia yang natural, rapi, dan konsisten. Hindari klaim tambahan yang belum diberikan, misalnya jumlah judul anime, kualitas resolusi, dukungan perangkat tertentu, lisensi, atau fitur akun yang belum dipastikan. Jangan membuat tombol yang menjanjikan fitur yang belum tersedia. Bila suatu fitur masih berupa rencana, beri label yang jelas seperti “Segera hadir” atau “Dalam pengembangan”.
+
+Website bertujuan membangun antusiasme menjelang peluncuran, menjelaskan nilai utama Nuenime, memperlihatkan karakter visual produk, dan memberikan informasi peluncuran yang mudah ditemukan.
+
+==================================================
+2. ARAH VISUAL DAN BRANDING
+==================================================
+
+Gunakan tema hitam dan silver sebagai dasar visual. Desain harus terasa modern, bersih, elegan, futuristis secara halus, dan berkelas tanpa menjadi berlebihan. Hindari tampilan template generik, ornamen yang tidak perlu, efek neon berlebihan, glow yang terlalu kuat, atau penggunaan gradasi di hampir setiap elemen.
+
+Palet yang disarankan:
+- Hitam pekat sebagai warna dasar halaman.
+- Hitam arang dan abu-abu gelap untuk panel dan lapisan kedalaman.
+- Silver, abu-abu metalik, dan putih lembut untuk teks serta aksen.
+- Gunakan kontras yang cukup agar teks tetap mudah dibaca.
+
+Logo utama dan favicon wajib memakai aset berikut:
+https://ai.wearecosplayer.my.id/assets/images/nue-ai-v2.png
+
+Gunakan URL tersebut secara konsisten pada logo website dan favicon. Jangan menggambar ulang, mengganti, atau mengubah identitas logo. Atur ukuran, object-fit, dan ruang di sekeliling logo agar tampil rapi. Siapkan fallback jika gambar gagal dimuat, tetapi jangan mengganti aset utama tanpa alasan.
+
+Tambahkan favicon melalui metadata HTML yang sesuai. Jika memungkinkan, gunakan aset yang sama sebagai ikon browser dengan ukuran tampilan yang tepat.
+
+Gunakan Remix Icon untuk ikon navigasi, fitur, tombol, status, dan elemen antarmuka. Muat Remix Icon dari sumber resminya atau paket yang sesuai. Jangan menggunakan emoji sebagai pengganti ikon antarmuka. Pastikan ikon memiliki ukuran, garis, dan jarak yang konsisten.
+
+Gunakan tipografi modern dan mudah dibaca. Buat hierarki yang jelas antara judul utama, judul bagian, isi paragraf, label kecil, dan teks tombol. Hindari teks yang terlalu kecil, terlalu tipis, atau memiliki kontras rendah.
+
+==================================================
+3. PENGALAMAN 3D SCROLL INTERAKTIF
+==================================================
+
+Bangun pengalaman scroll yang terasa seperti perjalanan visual melalui dunia Nuenime. Saat pengguna menggulir halaman, komponen harus bertransformasi dengan halus dan terkontrol. Jangan hanya menggunakan fade-in standar pada setiap bagian. Rancang perubahan bentuk dan ruang yang nyata, tetapi tetap menjaga keterbacaan dan kemudahan navigasi.
+
+Contoh perilaku yang diinginkan:
+- Hero utama memiliki komposisi 3D dengan perspektif, kedalaman, dan beberapa lapisan visual.
+- Ketika halaman mulai digulir, logo atau objek visual utama dapat mengecil, berputar sedikit, bergeser ke sisi, atau berpindah ke lapisan kedalaman.
+- Judul utama dapat berubah posisi, ukuran, atau susunan dengan transisi yang halus.
+- Panel fitur dapat berubah dari kartu datar menjadi susunan bertingkat, menyudut, berputar, atau membentuk komposisi ruang.
+- Elemen dekoratif dapat bergerak pada kecepatan berbeda untuk menciptakan parallax yang wajar.
+- Bagian tentang pengalaman menonton dapat muncul sebagai objek atau panel yang bertransisi dari bentuk lebar menjadi susunan modular.
+- Bagian tanggal rilis dapat menjadi fokus visual yang semakin jelas saat pengguna mendekatinya.
+- Penutup halaman dapat menyatukan kembali elemen-elemen yang sebelumnya tersebar menjadi satu komposisi yang utuh.
+
+Gunakan CSS 3D seperti perspective, transform-style: preserve-3d, translateZ, rotateX, rotateY, scale, dan transform-origin bila sesuai. Gunakan JavaScript untuk menghubungkan progres scroll dengan progres animasi. Gunakan IntersectionObserver untuk mengaktifkan animasi saat bagian tertentu terlihat apabila itu lebih efisien.
+
+Animasi harus memiliki arah, tujuan, dan urutan yang jelas. Hindari transformasi ekstrem yang membuat teks sulit dibaca, objek bertabrakan, elemen melompat, atau layout berubah secara tidak terduga. Gunakan easing yang halus dan durasi yang konsisten. Pastikan pengalaman tetap stabil ketika pengguna menggulir cepat, menggulir kembali ke atas, atau membuka halaman di perangkat dengan performa terbatas.
+
+Jangan membuat seluruh website terkunci pada satu animasi yang tidak dapat dilewati. Pengguna tetap harus dapat menggulir secara normal. Jangan memaksa scroll-jacking. Efek harus mengikuti scroll alami dan tidak menghilangkan kontrol pengguna.
+
+Bila memungkinkan, buat beberapa momen transisi yang khas, misalnya:
+1. Intro: logo dan judul muncul dalam ruang gelap.
+2. Transformasi: objek visual berpisah menjadi lapisan-lapisan.
+3. Fitur: panel bergeser dan membentuk susunan baru.
+4. Pengalaman: komponen berubah perspektif mengikuti scroll.
+5. Peluncuran: tanggal Oktober 2026 menjadi pusat perhatian.
+6. Penutup: identitas Nuenime kembali tampil dalam komposisi yang bersih.
+
+Jangan menggunakan file 3D besar yang tidak diperlukan. Utamakan CSS 3D dan elemen HTML yang ringan. Jika menggunakan Three.js atau pustaka 3D lain, jelaskan alasan penggunaannya dan optimalkan pemuatan agar tidak memperlambat halaman. Jangan menjadikan pustaka tambahan sebagai ketergantungan jika hasil serupa bisa dibuat secara lebih ringan.
+
+==================================================
+4. STRUKTUR KONTEN WEBSITE
+==================================================
+
+Buat halaman landing page yang lengkap dan tersusun dalam beberapa bagian berikut.
+
+A. HERO SECTION
+- Tampilkan logo Nuenime menggunakan aset resmi.
+- Tampilkan nama “Nuenime” dengan tipografi yang kuat dan bersih.
+- Headline utama yang menyampaikan bahwa pengguna dapat menikmati anime gratis tanpa iklan.
+- Deskripsi singkat bahwa Nuenime merupakan aplikasi streaming anime yang dikembangkan oleh Nueva Labs Development.
+- Tampilkan informasi “Direncanakan rilis Oktober 2026”.
+- Sediakan tombol CTA utama, misalnya “Jelajahi Nuenime”, yang menggulir pengguna ke bagian pengenalan.
+- Jika belum tersedia tautan unduhan atau aplikasi aktif, jangan membuat tombol unduhan palsu. CTA harus mengarah ke bagian yang benar-benar tersedia.
+
+B. BAGIAN PENGENALAN
+Jelaskan Nuenime secara singkat: aplikasi streaming anime yang dirancang agar pengguna dapat menikmati tontonan tanpa gangguan iklan dan tanpa biaya. Jangan menambahkan klaim fitur lain yang belum dikonfirmasi.
+
+C. BAGIAN KEUNGGULAN
+Buat panel fitur dengan desain visual yang menarik. Fokus pada informasi yang telah diketahui:
+- Gratis: pengalaman streaming dirancang tanpa biaya.
+- Tanpa iklan: pengalaman menonton tanpa iklan.
+- Dibangun untuk penggemar anime: jelaskan tujuan produk dengan kalimat yang tidak membuat klaim teknis yang belum pasti.
+Gunakan ikon Remix Icon yang relevan. Buat setiap panel memiliki animasi scroll yang berbeda tetapi tetap konsisten.
+
+D. BAGIAN PENGALAMAN VISUAL
+Tampilkan area eksperimental yang memperlihatkan gaya visual Nuenime. Area ini bukan halaman aplikasi palsu dan tidak boleh menampilkan data anime, katalog, pemutar video, atau fitur yang seolah-olah sudah tersedia jika belum ada. Fokus pada komposisi, kedalaman, bentuk, dan transisi visual.
+
+E. BAGIAN PELUNCURAN
+Tampilkan teks utama “Segera Hadir” dan tanggal “Oktober 2026”. Buat tampilannya menonjol, misalnya melalui angka atau label bulan yang bergerak dan berubah perspektif ketika discroll. Jangan membuat hitung mundur yang salah. Jika countdown digunakan, gunakan tanggal peluncuran yang sudah dikonfirmasi; jika belum ada tanggal pasti, cukup tampilkan bulan dan tahun.
+
+F. BAGIAN PENGEMBANG
+Tampilkan informasi “Dikembangkan oleh Nueva Labs Development”. Buat bagian ini sederhana dan profesional. Jangan mengarang alamat, kontak, akun sosial, atau informasi perusahaan yang belum diberikan.
+
+G. FOOTER
+- Logo Nuenime.
+- Ringkasan satu kalimat mengenai Nuenime.
+- Informasi pengembang.
+- Tahun hak cipta yang dinamis menggunakan PHP.
+- Tautan navigasi ke bagian-bagian halaman.
+- Tautan kebijakan privasi atau syarat penggunaan hanya jika halaman tersebut benar-benar tersedia. Jika belum dibuat, jangan tampilkan tautan yang rusak.
+
+==================================================
+5. NAVIGASI BAWAH — BUKAN DI ATAS
+==================================================
+
+Navigasi utama wajib berada di bagian bawah layar, bukan di atas. Buat bottom navigation yang modern, ringkas, dan mudah dijangkau pada perangkat mobile.
+
+Ketentuan navigasi:
+- Posisi tetap di bawah layar dengan CSS fixed, selama tidak menutupi konten penting.
+- Gunakan latar hitam transparan atau panel gelap dengan aksen silver yang elegan.
+- Boleh memakai efek blur secara ringan, tetapi teks dan ikon harus tetap terbaca.
+- Gunakan ikon Remix Icon.
+- Setiap item mempunyai ikon dan label yang jelas.
+- Item navigasi dapat mencakup Beranda, Tentang, Fitur, Rilis, dan Pengembang.
+- Klik item harus menggulir ke bagian yang sesuai dengan scroll behavior yang halus.
+- Tampilkan status aktif berdasarkan bagian yang sedang dilihat, menggunakan IntersectionObserver atau metode yang sesuai.
+- Tambahkan padding bawah pada konten agar bagian terakhir tidak tertutup navigasi.
+- Perhatikan safe-area inset pada perangkat iPhone dan perangkat dengan gesture navigation.
+- Pastikan navigasi tidak terlalu tinggi, tidak menutupi tombol, dan tidak mengganggu animasi 3D.
+- Pada desktop, bottom navigation boleh memiliki lebar terbatas dan ditempatkan di tengah bawah agar terlihat lebih terarah.
+- Pada layar kecil, item harus tetap mudah ditekan dan tidak saling bertumpuk.
+
+Jika diperlukan, sediakan tombol untuk kembali ke atas sebagai elemen tambahan, tetapi jangan mengganti navigasi bawah dengan navigasi atas.
+
+==================================================
+6. TEKNOLOGI DAN STRUKTUR PROYEK
+==================================================
+
+Website harus menggunakan PHP sebagai bahasa sisi server. Gunakan HTML5, CSS3, JavaScript modern, dan PHP yang kompatibel dengan lingkungan hosting PHP umum. Struktur kode harus terorganisasi, mudah dirawat, dan tidak seluruhnya ditumpuk dalam satu file besar jika pemisahan file akan meningkatkan keamanan dan keterbacaan.
+
+Contoh struktur yang dapat digunakan:
+- public/index.php — halaman utama.
+- public/assets/css/style.css — seluruh gaya visual dan responsif.
+- public/assets/js/main.js — navigasi, scroll interaction, dan animasi.
+- public/assets/images/ — aset lokal tambahan bila diperlukan.
+- app/config.php — konfigurasi aplikasi.
+- app/security.php — helper keamanan.
+- app/functions.php — fungsi umum yang dapat digunakan ulang.
+- app/views/ — komponen atau template jika diperlukan.
+- storage/logs/ — log aplikasi, berada di luar direktori publik jika memungkinkan.
+- .htaccess — aturan server Apache jika hosting mendukungnya.
+
+Struktur ini merupakan contoh dan boleh disesuaikan, tetapi file konfigurasi, log, serta data internal tidak boleh dapat diakses langsung dari browser. Jangan menyimpan secret atau kredensial dalam folder publik.
+
+Jangan menggunakan framework besar hanya demi terlihat modern. Jika memilih framework, pastikan alasannya jelas, struktur tetap mudah dipahami, dan instruksi instalasi disediakan. Untuk landing page ini, PHP native yang ditulis dengan aman dapat digunakan.
+
+==================================================
+7. KEAMANAN PHP
+==================================================
+
+Keamanan harus menjadi bagian dari implementasi, bukan hanya catatan. Walaupun website utamanya bersifat informatif dan belum membutuhkan akun, buat fondasi keamanan yang baik dan jangan menambahkan sistem login, database, formulir, atau API yang tidak diperlukan.
+
+Terapkan praktik berikut:
+- Validasi dan sanitasi input di sisi server apabila ada input pengguna.
+- Escape output dinamis menggunakan htmlspecialchars dengan encoding UTF-8 dan konfigurasi yang tepat untuk mencegah XSS.
+- Jangan menyisipkan input pengguna secara langsung ke HTML, atribut, JavaScript, CSS, atau query.
+- Jika database benar-benar diperlukan pada pengembangan berikutnya, gunakan PDO dan prepared statements. Jangan membangun query SQL dengan penggabungan string dari input pengguna.
+- Simpan kredensial dan secret di environment variables atau konfigurasi di luar direktori publik. Jangan pernah menaruh API key atau password dalam JavaScript yang dikirim ke browser.
+- Nonaktifkan display_errors pada lingkungan produksi dan catat error secara aman ke log yang tidak dapat diakses publik.
+- Atur error handling agar tidak menampilkan path server, detail konfigurasi, stack trace, atau informasi sensitif kepada pengunjung.
+- Terapkan Content Security Policy (CSP) yang sesuai dengan sumber aset yang benar-benar digunakan.
+- Pertimbangkan header keamanan seperti X-Content-Type-Options: nosniff, Referrer-Policy, Permissions-Policy, dan frame-ancestors melalui CSP atau konfigurasi server.
+- Gunakan HTTPS pada deployment produksi.
+- Atur cookie dengan Secure, HttpOnly, dan SameSite bila suatu saat website menggunakan cookie atau session.
+- Jika session digunakan, konfigurasi session dengan aman dan regenerasi session ID saat diperlukan.
+- Jika kelak ditambahkan formulir yang mengubah data, gunakan perlindungan CSRF dan validasi server-side.
+- Batasi metode HTTP yang diterima sesuai kebutuhan.
+- Jangan mengaktifkan directory listing.
+- Lindungi file internal seperti .env, file konfigurasi, log, backup, dan file sumber yang tidak seharusnya diakses publik.
+- Jangan menyertakan detail error atau informasi server dalam respons publik.
+- Terapkan rate limiting hanya untuk endpoint yang memang membutuhkan perlindungan terhadap penyalahgunaan.
+- Hindari dependensi usang. Jika memakai pustaka pihak ketiga, gunakan versi yang terawat dan dokumentasikan sumbernya.
+- Jangan mengklaim website sepenuhnya aman hanya karena beberapa header telah ditambahkan. Jelaskan asumsi dan batasan keamanan yang masih perlu diuji.
+
+Jika hosting memakai Apache, berikan contoh konfigurasi .htaccess yang sesuai dan aman, tetapi jangan membuat aturan yang berisiko memblokir file CSS, JavaScript, gambar, atau routing yang dibutuhkan. Jika hosting bukan Apache, jelaskan aturan yang perlu diterapkan pada konfigurasi server yang sesuai.
+
+Karena halaman ini belum membutuhkan login atau input sensitif, hindari membuat sistem autentikasi, database, dan endpoint yang tidak perlu. Minimalkan permukaan serangan.
+
+==================================================
+8. RESPONSIVE DESIGN DAN AKSESIBILITAS
+==================================================
+
+Website harus dirancang dengan pendekatan mobile-first dan diuji pada:
+- Ponsel Android dengan browser Chrome.
+- Ponsel berukuran layar kecil.
+- Tablet.
+- Laptop dan desktop.
+- Layar dengan rasio aspek yang berbeda.
+
+Pastikan:
+- Tidak ada horizontal overflow.
+- Judul tidak terpotong.
+- Navigasi bawah tidak menutupi konten.
+- Elemen 3D tetap proporsional.
+- Tombol memiliki area sentuh yang memadai.
+- Semua tautan dan tombol dapat digunakan dengan keyboard.
+- Fokus keyboard terlihat dengan jelas.
+- Gunakan elemen HTML semantik.
+- Tambahkan alt text yang sesuai untuk gambar bermakna.
+- Gunakan label aksesibel untuk ikon yang tidak memiliki teks.
+- Kontras teks memenuhi standar aksesibilitas yang wajar.
+- Hormati prefers-reduced-motion: jika pengguna memilih pengurangan animasi, kurangi atau nonaktifkan transformasi yang intens dan sediakan pengalaman scroll yang tetap nyaman.
+- Jangan menyampaikan informasi penting hanya melalui warna atau animasi.
+- Jangan membuat animasi berkedip cepat atau efek yang dapat mengganggu pengguna.
+
+==================================================
+9. PERFORMA DAN OPTIMASI
+==================================================
+
+Efek visual harus tetap lancar pada perangkat kelas menengah. Hindari animasi yang membuat browser terus-menerus menghitung layout.
+
+Ketentuan performa:
+- Utamakan animasi transform dan opacity.
+- Gunakan requestAnimationFrame bila diperlukan untuk animasi berbasis scroll.
+- Hindari memasang event listener scroll berulang kali untuk setiap elemen.
+- Gunakan passive event listener jika sesuai.
+- Throttle atau sinkronkan pekerjaan scroll agar tidak membebani main thread.
+- Lepaskan observer atau listener yang tidak lagi diperlukan.
+- Gunakan will-change hanya pada elemen yang benar-benar membutuhkan dan jangan memasangnya ke semua komponen.
+- Hindari terlalu banyak blur, filter berat, shadow besar, atau lapisan transparan.
+- Gunakan lazy loading untuk gambar tambahan di luar bagian awal halaman.
+- Atur ukuran gambar dengan tepat agar tidak terjadi layout shift.
+- Tambahkan width dan height atau aspect-ratio pada gambar.
+- Hindari mengunduh library besar jika fitur dapat dibuat dengan JavaScript biasa.
+- Pastikan halaman tetap bisa dibaca dan digunakan jika JavaScript gagal dimuat.
+- Berikan fallback yang masuk akal jika fitur animasi 3D tidak didukung browser.
+
+==================================================
+10. INTERAKSI DAN DETAIL POLISH
+==================================================
+
+Tambahkan detail interaksi yang halus:
+- Hover state yang jelas pada tombol dan navigasi.
+- Active state pada item navigasi bawah.
+- Transisi fokus keyboard yang terlihat.
+- Gerakan pointer yang halus hanya jika tidak mengganggu aksesibilitas.
+- Perubahan kedalaman atau sudut panel ketika pengguna menggulir.
+- Perpindahan antarbagiannya konsisten dan tidak membuat konten berkedip.
+- Indikator progres scroll tipis bila cocok dengan desain.
+- Loading state sederhana hanya jika memang diperlukan.
+- Pesan fallback yang jelas untuk aset yang gagal dimuat.
+
+Jangan membuat elemen dekoratif yang menghalangi klik atau pembacaan teks. Elemen dekoratif yang tidak interaktif sebaiknya memakai pointer-events: none. Pastikan stacking context dan z-index dikelola dengan konsisten, terutama untuk bottom navigation dan komponen 3D.
+
+==================================================
+11. SEO DAN METADATA
+==================================================
+
+Sediakan metadata dasar yang benar:
+- Title yang menyebut Nuenime dan nilai utamanya.
+- Meta description yang menjelaskan Nuenime sebagai aplikasi streaming anime gratis tanpa iklan dan menyebut rencana peluncuran Oktober 2026.
+- Viewport meta untuk perangkat mobile.
+- Favicon memakai aset resmi yang diberikan.
+- Open Graph title, description, image, dan type yang relevan.
+- Theme color yang sesuai dengan tema hitam.
+- Bahasa dokumen menggunakan id.
+- Heading tersusun hierarkis dan tidak melompat tanpa alasan.
+- URL kanonis hanya jika domain produksi sudah dipastikan.
+
+Jangan membuat schema, ulasan, rating, atau data terstruktur yang berisi klaim palsu.
+
+==================================================
+12. STANDAR KUALITAS KODE
+==================================================
+
+Kode yang dihasilkan harus:
+- Lengkap dan benar-benar dapat dijalankan.
+- Tidak mengandung syntax error PHP, JavaScript, atau CSS.
+- Tidak menggunakan pseudocode untuk menggantikan bagian penting.
+- Tidak menyisakan tombol yang tidak bekerja.
+- Tidak mengandung tautan rusak atau href kosong yang berpura-pura sebagai fitur.
+- Memiliki penamaan class dan fungsi yang konsisten.
+- Memisahkan logika server, markup, gaya, dan interaksi sejauh masuk akal.
+- Memiliki komentar hanya pada bagian yang memang perlu dijelaskan.
+- Tidak menggunakan teks placeholder seperti “Lorem ipsum”.
+- Tidak mengarang informasi produk yang belum diberikan.
+- Tidak menghapus kebutuhan keamanan demi mempermudah implementasi.
+- Tidak membuat tampilan yang hanya bagus pada satu ukuran layar.
+
+Jangan menganggap animasi berhasil hanya karena kode sudah ditulis. Periksa perilakunya saat scroll maju dan mundur, resize layar, mengubah orientasi perangkat, mengaktifkan reduced motion, dan menggunakan navigasi bawah.
+
+==================================================
+13. HASIL AKHIR YANG WAJIB DIBERIKAN
+==================================================
+
+Berikan hasil sebagai proyek website yang utuh, bukan sekadar konsep desain. Sertakan:
+1. Struktur direktori proyek.
+2. Isi lengkap semua file yang dibutuhkan.
+3. Halaman landing page Nuenime yang berfungsi.
+4. Animasi 3D scroll dengan beberapa perubahan bentuk, skala, rotasi, posisi, dan kedalaman.
+5. Navigasi bawah yang berfungsi pada mobile dan desktop.
+6. Penggunaan Remix Icon untuk ikon antarmuka.
+7. Logo dan favicon dari URL aset resmi yang diberikan.
+8. Tema hitam-silver yang konsisten.
+9. Informasi Nuenime gratis tanpa iklan dan rencana rilis Oktober 2026.
+10. Implementasi PHP dengan praktik keamanan yang relevan.
+11. Panduan instalasi dan menjalankan proyek pada hosting PHP.
+12. Daftar pengaturan deployment yang perlu dilakukan, termasuk HTTPS, konfigurasi error produksi, dan perlindungan file internal.
+13. Checklist pengujian responsif, aksesibilitas, performa, dan keamanan.
+14. Penjelasan singkat tentang bagian kode yang mengendalikan animasi scroll agar mudah disesuaikan.
+
+Jika tidak dapat membuat file proyek secara langsung, tampilkan isi setiap file secara lengkap dan beri nama file dengan jelas. Jangan berhenti pada wireframe, deskripsi visual, atau potongan kode parsial.
+
+==================================================
+14. KRITERIA PENERIMAAN
+==================================================
+
+Pekerjaan dianggap selesai hanya jika:
+- Website terasa premium, orisinal, dan konsisten dengan branding Nuenime.
+- Tema utama hitam dan silver.
+- Navigasi berada di bawah, bukan di atas.
+- Logo dan favicon memakai URL aset yang ditentukan.
+- Ikon memakai Remix Icon.
+- Konten menjelaskan Nuenime sebagai aplikasi streaming anime gratis tanpa iklan.
+- Informasi rilis ditulis sebagai Oktober 2026 tanpa mengarang tanggal harian.
+- Scroll memicu perubahan komposisi visual dan transformasi 3D yang terlihat jelas tetapi tetap halus.
+- Pengguna tetap bisa scroll secara normal dan menggunakan navigasi dengan mudah.
+- Layout responsif dan tidak overflow.
+- Pengalaman reduced-motion tersedia.
+- PHP ditulis dengan aman dan tidak mengekspos konfigurasi sensitif.
+- Tidak ada tombol palsu, informasi rekaan, syntax error, atau tautan rusak.
+- Kode dan instruksi deployment cukup lengkap untuk dijalankan dan dikembangkan lebih lanjut.
+
+Hasil akhir harus terasa seperti pengalaman web interaktif yang dirancang khusus untuk Nuenime: elegan, imersif, ringan, aman, mudah digunakan, dan berorientasi pada peluncuran produk.
